@@ -1,0 +1,37 @@
+<%- include("header") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" type="text/css" href="/public/index.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <h1>To-Do App</h1>
+    </header> -->
+    <main>
+      <section id="add-task">
+        <form id="add-task-form">
+          <input
+            type="text"
+            id="task-name"
+            placeholder="Add a new task"
+            required
+          />
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+      <section id="task-list">
+        <h2>Pending Tasks</h2>
+        <ul id="pending-tasks"></ul>
+
+        <h2>Completed Tasks</h2>
+        <ul id="completed-tasks"></ul>
+
+        <h2>Deleted Tasks</h2>
+        <ul id="deleted-tasks"></ul>
+      </section>
+    </main>
+    <script src="/public/script.js"></script>
+  </body>
+</html>
