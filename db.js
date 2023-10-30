@@ -3,8 +3,8 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 const MONGODB_URL = process.env.MONGODB_URL
 
-console.log(process.env.MONGODB_URL)
-const dbURI = 'mongodb://localhost/Tododb';
+// console.log(process.env.MONGODB_URL)
+// const dbURI = 'mongodb://localhost/Tododb';
 
 const mongoDbConnection=()=>{
     mongoose.connect(MONGODB_URL)
@@ -16,4 +16,10 @@ const mongoDbConnection=()=>{
         console.log(`An error has occured ; ${err}`)
     })
  }
+
+ //close the databse connection when the application exists
+//  process.on('SIGINT', () => {
+//     closeDatabaseConnection();
+//     process.exit();
+// })
 module.exports={mongoDbConnection}
