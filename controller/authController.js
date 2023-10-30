@@ -49,4 +49,7 @@ const isLoggedIn = async (req, res, next) => {
 }
 
 
-module.exports = { isAuthenticated, isLoggedIn }
+module.exports = { 
+    isAuthenticated, 
+    isLoggedIn 
+}

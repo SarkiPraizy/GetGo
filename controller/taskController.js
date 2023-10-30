@@ -99,4 +99,8 @@ async function getTaskStats(req, res) {
     }
 }
 
-module.exports = { getAll, deleteTask, updateTask, createNewTask, getTaskStats }
+module.exports = { getAll, 
+    deleteTask, 
+    updateTask, 
+    createNewTask, 
+    getTaskStats }

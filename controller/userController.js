@@ -1,5 +1,5 @@
 const { userModel } = require('./../model/user')
-const { jwtToken } = require('./../utils/jwt')
+const { jwtToken } = require('../utils/jwt')
 const appError = require('./../utils/errorhandler')
 
 
@@ -56,7 +56,7 @@ async function updateProfile(req, res, next) {
     }
 
 }
-async function deleteAcct(req, res, next) {
+async function deleteAccount(req, res, next) {
     try {
 
         const deleteUser = await userModel.findByIdAndUpdate(req.user._id)
@@ -78,4 +78,8 @@ const logout = (req, res) => {
 };
 
 
-module.exports = { signUp, updateProfile, deleteAcct, Login, logout }
+module.exports = { signUp,
+     updateProfile, 
+     deleteAccount, 
+     Login, 
+     logout }
